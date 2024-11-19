@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de formulario html</title>
+    <style>
+        .my-input {
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <form action="#" method="post" enctype="multipart/form-data"> -->
+    <!--Mal,  no hacer br -->
+    <!-- <form action="#">
+        Nombre: <br>
+        <input type="text" name="nombre"> <br><br>
+        Apellidos: <br>
+        <input type="text" name="nombre" <br><br>
+        Imagen:<br>
+        <input type="file" name="imagen">
+        <br><br>
+        <input type="submit">
+    </form> -->
+
+    <form action="#" method="get" autocomplete="off">
+        <div class="my-input">
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre" placeholder="tu nombre aqui" size="20">
+        </div>
+
+        <div class="my-input">
+            <label for="apellidos">Apellidos</label>
+            <input type="text" name="apellidos" id="apellidos" autofocus>
+        </div>
+
+        <!--Ejemplo radio button-->
+        <p>Selecciona tu postre</p>
+        <input type="radio" name="postre-favorito" id="tarta-queso" value="tarta de queso">
+        <label for="tarta-queso">Tarta de queso</label>
+        <br>
+        <input type="radio" name="postre-favorito" id="tiramisu" value="tiramisu">
+        <label for="tiramisu">Tiramisú</label>
+        <br>
+        <input type="radio" name="postre-favorito" id="helado" value="helado">
+        <label for="helado">Helado</label>
+        <br>
+        <input type="radio" name="postre-favorito" id="ninguno" value="ninguno" checked>
+        <label for="ninguno">No me gustan</label>
+        <br>
+        <!--checkbox-->
+        <p>Elije algunos Hobbies</p>
+        <input type="checkbox" name="hobbie-1" id="hobbie-1" value="futbol" checked>
+        <label for="hobbie-1">Jugar al fútbol</label>
+        <br>
+        <input type="checkbox" name="hobbie-2" id="hobbie-2" tabindex="1">
+        <label for="hobbie-2">Hacer maquetas</label>
+        <br>
+        <input type="checkbox" name="hobbie-3" id="hobbie-3" value="padel">
+        <label for="hobbie-3">Jugar al padel</label>
+        <br>
+        <p>Escribe tu email</p>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email">
+        <br>
+        <!-- Textos más largos -->
+        <label for="description">Que te cuentas?</label><br>
+        <textarea wrap="soft" cols="20" rows="20" name="description" id="description"
+            placeholder="Texto interior..."></textarea>
+        <br>
+
+        <!-- Numero -->
+        <input type="number" value="0" min="0" max="20" step="2">
+        <input type="range" name="range" id="range" value="0" min="3" max="6"
+            oninput="this.nextElementSibling.value = this.value">
+        <output>0</output>
+        <br>
+        <!-- campos de selecion de opiones -->
+        <label for="cars">Eleige un coche</label>
+        <select name="cars" id="cars">
+            <option value=""> - </option>
+            <optgroup label="europeos">
+                <option value="fiat">Fiat</option>
+                <option value="bmv">BMW</option>
+                <option value="volvo">Volvo</option>
+                <option value="audi">Audi</option>
+            </optgroup>
+            <optgroup label="otros">
+                <option value="kia">Kia</option>
+                <option value="Jeep">Jeep</option>
+            </optgroup>
+        </select>
+        <br>
+        <!--El type submit envia el formulario-->
+        <div class="my-input">
+            <input type="submit">
+        </div>
+
+    </form>
+</body>
+
+</html>
